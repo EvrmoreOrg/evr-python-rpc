@@ -1,18 +1,20 @@
-# RavenRPC
+The repository was forked from https://github.com/JonPizza/ravenrpc
 
-Crazy simple Ravencoin RPC library, designed to work with all versions of Ravencoin.
+# EvrmoreRPC
+
+Crazy simple Evrmore RPC library, designed to work with all versions of Evrmore.
 
 *"I have seen many libraries, this one... is pretty average" - Joe*
 
 INSTALL:
 
 ```
-pip install ravenrpc
+pip install evrmorerpc
 ```
 
-## Setting Up Ravend (Linux)
+## Setting Up Evrmored (Linux)
 
-go to your `.raven` folder, add a `raven.conf` file if there is not one already, in that file add:
+go to your `.evrmore` folder, add a `evrmore.conf` file if there is not one already, in that file add:
 
 ```
 rpcuser=username
@@ -21,22 +23,22 @@ rpcpassword=password
 
 **Make sure you use a secure username and password!**
 
-Then run `./ravend` in the directory that it is located!
+Then run `./evrmored` in the directory that it is located!
 
 Examples:
 
 ```python
-from ravenrpc import Ravencoin
+from evrmorerpc import Evrmore
 
-rvn = Ravencoin('username', 'password')
-rvn.getinfo()
-rvn.listreceivedbyaddress(0, True)
+evr = Evrmore('username', 'password')
+evr.getinfo()
+evr.listreceivedbyaddress(0, True)
 ```
 
 Any other rpc method:
 
 ```python
-rvn.<METHOD>(<param1>, <param2>, ...)
+evr.<METHOD>(<param1>, <param2>, ...)
 ```
 
 **Note**: If the username and password are incorrect, then a empty string will be returned. 
@@ -48,11 +50,11 @@ Please report any bugs by filling out an issue!
 Just set the port when accessing:
 
 ```python
-btc = Ravencoin('username', 'password', port=8332)
+btc = Evrmore('username', 'password', port=8332)
 ```
 
 And if you want to use a different host:
 
 ```python
-btc = Ravencoin('username', 'password', host='host.com', port=8333)
+btc = Evrmore('username', 'password', host='host.com', port=8333)
 ```
